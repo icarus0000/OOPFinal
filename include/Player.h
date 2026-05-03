@@ -9,4 +9,5 @@ public:
     Player(float startX, float startY);
     
     void Update() override; 
+    void Draw() override;
 };

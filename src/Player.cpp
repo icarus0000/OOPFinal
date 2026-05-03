@@ -35,3 +35,7 @@ void Player::Update() {
         y = GetScreenHeight() - height;
     }
 }
+void Player::Draw() {
+    // 玩家自己知道自己要畫成藍色方塊
+    DrawRectangle(x, y, width, height, BLUE);
+}

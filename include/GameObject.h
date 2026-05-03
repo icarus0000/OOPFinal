@@ -13,8 +13,8 @@ public:
 
     // 更新物件的資料 (例如移動、狀態改變)
     virtual void Update() = 0; // 純虛擬函式，強迫子類別實作
-
-    // Getter，讓外部 (UI) 可以取得座標來畫圖
+    virtual void Draw() = 0; //純虛擬函式，繪畫函數
+    // Getter，如果外部需要獲取座標
     float GetX() const;
     float GetY() const;
     float GetWidth() const;

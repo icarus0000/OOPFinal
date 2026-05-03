@@ -26,10 +26,7 @@ int main() {
 
         // 根據物件類型決定要怎麼畫
         for (auto& obj : gameObjects) {
-            if (obj->GetType() == "Player") {
-                // 從物件取得 Data，畫出藍色方塊代表 Player
-                DrawRectangle(obj->GetX(), obj->GetY(), obj->GetWidth(), obj->GetHeight(), BLUE);
-            }
+            obj->Draw(); 
         }
 
         EndDrawing();

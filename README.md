@@ -1,3 +1,4 @@
+```mermaid
 classDiagram
     class GameObject {
         #float x
@@ -7,6 +8,7 @@ classDiagram
         #string type
         +GameObject(startX, startY, w, h, t)
         +Update() void
+        +Draw() void
         +GetX() float
         +GetY() float
         +GetWidth() float
@@ -18,6 +20,7 @@ classDiagram
         -float speed
         +Player(startX, startY)
         +Update() void
+        +Draw() void
     }
     
     class GameObjectFactory {
@@ -25,5 +28,6 @@ classDiagram
     }
     
     GameObject <|-- Player : 繼承 (Inheritance)
-    GameObjectFactory ..> GameObject : 依賴/生成
-    GameObjectFactory ..> Player : 依賴/生成
+    GameObjectFactory ..> GameObject : 依賴
+    GameObjectFactory ..> Player : 依賴
+```
